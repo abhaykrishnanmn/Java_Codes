@@ -1,11 +1,20 @@
-// Create an array with the values (1, 2, 3, 4, 5, 6, 7) and shuffle it.
+// Create an array and shuffle it.
 
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class ShuffleArray {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7};
+        int s=0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of the array:");
+        s=sc.nextInt();
+        int[] array= new int[s];
+        System.out.println("Enter the array values");
+        for(int i = 0; i<s ;i++){
+            array[i] = sc.nextInt();
+        }
         shuffleArray(array);
         for (int num : array) {
             System.out.print(num + " ");
